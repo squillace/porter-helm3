@@ -1,5 +1,5 @@
-MIXIN = skeletor
-PKG = github.com/deislabs/porter-$(MIXIN)
+MIXIN = helm3
+PKG = github.com/squillace/porter-$(MIXIN)
 SHELL = bash
 
 PORTER_HOME ?= $(HOME)/.porter
@@ -113,4 +113,4 @@ clean: clean-packr
 	-rm -fr bin/
 
 clean-packr: packr2
-	cd pkg/skeletor && packr2 clean
+	cd pkg/helm3 && packr2 clean
