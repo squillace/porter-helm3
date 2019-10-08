@@ -18,7 +18,6 @@ import "fmt"
 // for an invocation image using this mixin
 func (m *Mixin) Build() error {
 	fmt.Fprintln(m.Out, `RUN apt-get update && apt-get install -y curl`)
-	//fmt.Fprintln(m.Out, `RUN apt-get update && apt-get install -y mv`)
 	fmt.Fprintln(m.Out, `RUN curl https://get.helm.sh/helm-v3.0.0-beta.3-linux-amd64.tar.gz --output helm3.tar.gz`)
 	fmt.Fprintln(m.Out, `RUN tar -xvf helm3.tar.gz`)
 	fmt.Fprintln(m.Out, `RUN mv linux-amd64/helm /usr/local/bin/helm3`)
